@@ -12,7 +12,7 @@ function AboutMe({ data }: any) {
         <div className="min-h-screen bg-zinc-900 text-white">
             <Header name={data.name} />
 
-            <div className="grid grid-cols-2 gap-8 max-w-4xl mx-auto mt-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mt-8 px-4">
 
                 <ProgrammingSkills skills={data.programmingSkills} />
 

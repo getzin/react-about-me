@@ -40,6 +40,11 @@
   ],
 
   "favoriteAlbums": [
+
+    {
+      "artist": "King Giddra",
+      "album": "空からの力"
+    },
     {
       "artist": "Soul Scream",
       "album": "The Deep"
@@ -47,10 +52,6 @@
     {
       "artist": "Rhymester",
       "album": "Egotopia"
-    },
-    {
-      "artist": "King Giddra",
-      "album": "空からの力"
     }
   ],
 
