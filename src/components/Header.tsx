@@ -3,10 +3,10 @@
 import Name from './Name';
 import ProfileImage from './ProfileImage';
 
-function Header() {
+function Header({ name }: any) {
     return (
         <>
-            <Name />
+            <Name name={name} />
             <ProfileImage />
         </>
     );

@@ -7,14 +7,14 @@ import FavoriteAlbums from './FavoriteAlbums';
 import Contact from './Contact';
 
 
-function AboutMe() {
+function AboutMe({ data }: any) {
     return (
         <>
-            <Header />
-            <ProgrammingSkills />
-            <Languages />
-            <FavoriteAlbums />
-            <Contact />
+            <Header name={data.name} />
+            <ProgrammingSkills skills={data.programmingSkills} />
+            <Languages languages={data.languages} />
+            <FavoriteAlbums albums={data.favoriteAlbums} />
+            <Contact contact={data.contact} />
         </>
     );
 }

@@ -1,10 +1,10 @@
 // SkillCard.tsx
 
-function SkillCard() {
+function SkillCard({ name, rating }: any) {
     return (
         <>
-            <h3>Skill Name</h3>
-            <p>Skill Description</p>
+            <h3>{name}</h3>
+            <p>{rating}/5</p>
         </>
     );
 }

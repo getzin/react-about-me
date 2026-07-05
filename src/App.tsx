@@ -1,9 +1,11 @@
+import data from "./data/profile.json";
+
 import AboutMe from './components/AboutMe';
 
 function App() {
   return (
     <div>
-      <AboutMe />
+      <AboutMe data={data} />
     </div>
   );
 }

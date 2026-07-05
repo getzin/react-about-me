@@ -1,10 +1,10 @@
 // ContactLink.tsx
 
-function ContactLink() {
+function ContactLink( {name, value}: any ) {
     return (
         <>
-            <h3>Website Name</h3>
-            <p>Link (https://example.com)</p>
+            <h3>{name}</h3>
+            <p>{value}</p>
         </>
     );
 }

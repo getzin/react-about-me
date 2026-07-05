@@ -1,9 +1,9 @@
 // Name.tsx
 
-function Name() {
+function Name({ name }: any) {
     return (
         <>
-            <h1>John Doe</h1>
+            <h1>{name}</h1>
         </>
     );
 }

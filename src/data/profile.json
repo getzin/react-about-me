@@ -1,0 +1,67 @@
+{
+  "name": "Andreas Getzin",
+
+  "programmingSkills": [
+    {
+      "name": "C/C++",
+      "rating": 4
+    },
+    {
+      "name": "Python",
+      "rating": 3
+    },
+    {
+      "name": "JavaScript",
+      "rating": 1
+    }
+  ],
+
+  "languages": [
+    {
+      "name": "German",
+      "level": "Native"
+    },
+    {
+      "name": "English",
+      "level": "C1"
+    },
+    {
+      "name": "Japanese",
+      "level": "N2"
+    },
+    {
+      "name": "Mandarin",
+      "level": "HSK2"
+    },
+    {
+      "name": "Spanish",
+      "level": "A1"
+    }
+  ],
+
+  "favoriteAlbums": [
+    {
+      "artist": "Soul Scream",
+      "album": "The Deep"
+    },
+    {
+      "artist": "Rhymester",
+      "album": "Egotopia"
+    },
+    {
+      "artist": "King Giddra",
+      "album": "空からの力"
+    }
+  ],
+
+  "contact": [
+    {
+      "name": "GitHub",
+      "value": "https://github.com/getzin"
+    },
+    {
+      "name": "Email",
+      "value": "andreas.getzin@gmail.com"
+    }
+  ]
+}

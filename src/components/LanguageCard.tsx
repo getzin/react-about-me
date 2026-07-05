@@ -1,10 +1,10 @@
 // LanguageCard.tsx
 
-function LanguageCard() {
+function LanguageCard({ name, level }: any) {
     return (
         <>
-            <h3>Language Name</h3>
-            <p>Proficiency Level</p>
+            <h3>{name}</h3>
+            <p>{level}</p>
         </>
     );
 }

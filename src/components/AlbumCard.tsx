@@ -1,10 +1,10 @@
 // AlbumCard.tsx
 
-function AlbumCard() {
+function AlbumCard( { artist, album }: any ) {
     return (
         <>
-            <h3>Artist</h3>
-            <p>Album</p>
+            <h3>{artist}</h3>
+            <p>{album}</p>
         </>
     );
 }
