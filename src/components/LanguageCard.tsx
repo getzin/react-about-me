@@ -2,10 +2,10 @@
 
 function LanguageCard({ name, level }: any) {
     return (
-        <>
-            <h3>{name}</h3>
-            <p>{level}</p>
-        </>
+        <div className="mb-8">
+            <h2 className="text-2xl font-bold text-white">{name}</h2>
+            <p className="text-lg text-zinc-300">{level}</p>
+        </div>
     );
 }
 

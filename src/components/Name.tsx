@@ -2,9 +2,9 @@
 
 function Name({ name }: any) {
     return (
-        <>
-            <h1>{name}</h1>
-        </>
+        <h1 className="text-6xl font-bold mb-4">
+            {name}
+        </h1>
     );
 }
 
