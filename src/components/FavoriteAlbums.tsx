@@ -7,18 +7,14 @@ function FavoriteAlbums( { albums }: any) {
         <>
             <h2>Favorite Albums:</h2>
 
-            <AlbumCard
-                artist={albums[0].artist}
-                album={albums[0].album}
-            />
-            <AlbumCard
-                artist={albums[1].artist}
-                album={albums[1].album}
-            />
-            <AlbumCard
-                artist={albums[2].artist}
-                album={albums[2].album}
-            />
+            {albums.map((album: any) => (
+                <AlbumCard
+                    key={album.album}
+                    artist={album.artist}
+                    album={album.album}
+                />
+            ))}
+
         </>
     );
 }
