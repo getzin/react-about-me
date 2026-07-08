@@ -1,10 +1,10 @@
 // AboutMe.tsx
 
-import Header from './Header';
-import ProgrammingSkills from './ProgrammingSkills';
-import Languages from './Languages';
-import FavoriteAlbums from './FavoriteAlbums';
-import Contact from './Contact';
+import Header from "../components/Header";
+import ProgrammingSkills from "../components/ProgrammingSkills";
+import Languages from "../components/Languages";
+import FavoriteAlbums from "../components/FavoriteAlbums";
+import Contact from "../components/Contact";
 
 
 function AboutMe({ data }: any) {

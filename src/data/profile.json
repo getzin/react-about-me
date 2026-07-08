@@ -40,18 +40,35 @@
   ],
 
   "favoriteAlbums": [
-
     {
+      "id": "king-giddra",
       "artist": "King Giddra",
-      "album": "空からの力"
+      "album": "空からの力",
+      "year": 1995
     },
     {
+      "id": "the-deep",
       "artist": "Soul Scream",
-      "album": "The Deep"
+      "album": "The Deep",
+      "year": 2000
     },
     {
+      "id": "egotopia",
       "artist": "Rhymester",
-      "album": "Egotopia"
+      "album": "Egotopia",
+      "year": 2001
+    },
+    {
+      "id": "ore-ni-iwaserya",
+      "artist": "Rhymester",
+      "album": "俺に言わせりゃ",
+      "year": 1993
+    },
+    {
+      "id": "respect",
+      "artist": "Rhymester",
+      "album": "Respect",
+      "year": 1999
     }
   ],
 
