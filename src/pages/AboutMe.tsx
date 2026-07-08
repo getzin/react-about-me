@@ -1,4 +1,4 @@
-// AboutMe.tsx
+// src/pages/AboutMe.tsx
 
 import Header from "../components/Header";
 import ProgrammingSkills from "../components/ProgrammingSkills";

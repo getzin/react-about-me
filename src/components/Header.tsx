@@ -1,4 +1,4 @@
-// Header.tsx
+// src/components/Header.tsx
 
 import Name from "./Name";
 import ProfileImage from "./ProfileImage";

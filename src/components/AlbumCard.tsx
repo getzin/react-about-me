@@ -1,4 +1,4 @@
-// AlbumCard.tsx
+// src/components/AlbumCard.tsx
 
 import { Link } from "react-router-dom";
 

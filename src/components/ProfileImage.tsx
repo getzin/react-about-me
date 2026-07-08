@@ -1,4 +1,4 @@
-// ProfileImage.tsx
+// src/components/ProfileImage.tsx
 
 function ProfileImage() {
   return (

@@ -1,4 +1,4 @@
-// SkillCard.tsx
+// src/components/SkillCard.tsx
 
 function SkillCard({ name, rating }: any) {
   return (

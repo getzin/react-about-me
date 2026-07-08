@@ -1,3 +1,5 @@
+// src/App.tsx
+
 import data from "./data/profile.json";
 
 import AboutMe from "./pages/AboutMe";

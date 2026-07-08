@@ -1,4 +1,4 @@
-// FavoriteAlbums.tsx
+// src/components/FavoriteAlbums.tsx
 
 import AlbumCard from "./AlbumCard";
 

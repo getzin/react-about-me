@@ -1,4 +1,4 @@
-//
+// src/components/ProgrammingSkills.tsx
 
 import SkillCard from "./SkillCard";
 

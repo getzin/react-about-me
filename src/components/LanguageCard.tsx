@@ -1,4 +1,4 @@
-// LanguageCard.tsx
+// src/components/LanguageCard.tsx
 
 function LanguageCard({ name, level }: any) {
   return (

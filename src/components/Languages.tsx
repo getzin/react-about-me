@@ -1,4 +1,4 @@
-// Languages.tsx
+// src/components/Languages.tsx
 
 import LanguageCard from "./LanguageCard";
 
