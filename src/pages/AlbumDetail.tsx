@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import { useParams } from "react-router-dom";
 
 function AlbumDetail({ albums }: any) {
@@ -11,10 +13,28 @@ function AlbumDetail({ albums }: any) {
     }
 
     return (
-        <div>
-            <h1>{album?.album}</h1>
-            <h2>{album?.artist}</h2>
-            <p>{album?.year}</p>
+        <div className="min-h-screen bg-zinc-900 text-white">
+            <div className="max-w-3xl mx-auto px-4 py-16">
+                <Link
+                    to="/albums"
+                    className="text-zinc-400 hover:text-white transition mb-8 inline-block"
+                >
+                    ← Back to Albums
+                </Link>
+
+                <h1 className="text-5xl font-bold">
+                    {album.album}
+                </h1>
+
+                <h2 className="text-2xl text-zinc-300 mt-4">
+                    {album.artist}
+                </h2>
+
+                <p className="text-zinc-500 mt-6">
+                    Released {album.year}
+                </p>
+
+            </div>
         </div>
     );
 }

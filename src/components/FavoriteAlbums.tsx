@@ -18,7 +18,10 @@ function FavoriteAlbums( { albums }: any) {
                 />
             ))}
 
-            <Link to="/albums">
+            <Link
+                to="/albums"
+                className="hover:text-sky-400 transition"
+            >
                 More Albums →
             </Link>
 
