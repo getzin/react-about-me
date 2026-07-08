@@ -3,40 +3,32 @@ import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
 function AlbumDetail({ albums }: any) {
+  const { albumId } = useParams();
 
-    const { albumId } = useParams();
+  const album = albums.find((album: any) => album.id === albumId);
 
-    const album = albums.find((album: any) => album.id === albumId);
+  if (!album) {
+    return <h1>Album not found</h1>;
+  }
 
-    if (!album) {
-        return <h1>Album not found</h1>;
-    }
+  return (
+    <div className="min-h-screen bg-zinc-900 text-white">
+      <div className="max-w-3xl mx-auto px-4 py-16">
+        <Link
+          to="/albums"
+          className="text-zinc-400 hover:text-white transition mb-8 inline-block"
+        >
+          ← Back to Albums
+        </Link>
 
-    return (
-        <div className="min-h-screen bg-zinc-900 text-white">
-            <div className="max-w-3xl mx-auto px-4 py-16">
-                <Link
-                    to="/albums"
-                    className="text-zinc-400 hover:text-white transition mb-8 inline-block"
-                >
-                    ← Back to Albums
-                </Link>
+        <h1 className="text-5xl font-bold">{album.album}</h1>
 
-                <h1 className="text-5xl font-bold">
-                    {album.album}
-                </h1>
+        <h2 className="text-2xl text-zinc-300 mt-4">{album.artist}</h2>
 
-                <h2 className="text-2xl text-zinc-300 mt-4">
-                    {album.artist}
-                </h2>
-
-                <p className="text-zinc-500 mt-6">
-                    Released {album.year}
-                </p>
-
-            </div>
-        </div>
-    );
+        <p className="text-zinc-500 mt-6">Released {album.year}</p>
+      </div>
+    </div>
+  );
 }
 
 export default AlbumDetail;

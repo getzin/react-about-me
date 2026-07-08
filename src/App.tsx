@@ -17,22 +17,16 @@ function App() {
     <>
       <Navbar />
       <Routes>
+        <Route path="/" element={<AboutMe data={data} />} />
         <Route
-            path="/"
-            element={<AboutMe data={data} />}
+          path="/albums"
+          element={<Albums albums={data.favoriteAlbums} />}
         />
         <Route
-            path="/albums"
-            element={<Albums albums={data.favoriteAlbums} />}
+          path="/albums/:albumId"
+          element={<AlbumDetail albums={data.favoriteAlbums} />}
         />
-        <Route
-            path="/albums/:albumId"
-            element={<AlbumDetail albums={data.favoriteAlbums} />}
-        />
-        <Route
-            path="*"
-            element={<NotFound />}
-        />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   );
