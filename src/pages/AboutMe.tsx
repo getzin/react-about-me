@@ -7,18 +7,15 @@ import FavoriteAlbums from "../components/FavoriteAlbums";
 import Contact from "../components/Contact";
 
 function AboutMe({ data }: any) {
+  const { name, programmingSkills, languages, favoriteAlbums, contact } = data;
   return (
     <div className="min-h-screen bg-zinc-900 text-white">
-      <Header name={data.name} />
-
+      <Header name={name} />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mt-8 px-4">
-        <ProgrammingSkills skills={data.programmingSkills} />
-
-        <Languages languages={data.languages} />
-
-        <FavoriteAlbums albums={data.favoriteAlbums} />
-
-        <Contact contact={data.contact} />
+        <ProgrammingSkills skills={programmingSkills} />
+        <Languages languages={languages} />
+        <FavoriteAlbums albums={favoriteAlbums} />
+        <Contact contact={contact} />
       </div>
     </div>
   );
