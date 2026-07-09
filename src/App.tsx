@@ -14,6 +14,8 @@ import NotFound from "./pages/NotFound";
 
 import { Routes, Route } from "react-router-dom";
 
+import Playground from "./playground/Playground";
+
 function App() {
   return (
     <>
@@ -28,6 +30,7 @@ function App() {
           path="/albums/:albumId"
           element={<AlbumDetail albums={data.favoriteAlbums} />}
         />
+        <Route path="/playground" element={<Playground />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>
