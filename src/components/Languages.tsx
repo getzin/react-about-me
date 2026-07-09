@@ -8,11 +8,7 @@ function Languages({ languages }: any) {
       <h2 className="text-3xl font-bold mb-6">Languages:</h2>
 
       {languages.map((language: any) => (
-        <LanguageCard
-          key={language.name}
-          name={language.name}
-          level={language.level}
-        />
+        <LanguageCard key={language.name} {...language} />
       ))}
     </div>
   );

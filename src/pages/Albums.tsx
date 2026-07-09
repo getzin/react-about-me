@@ -15,13 +15,7 @@ function Albums({ albums }: any) {
         <h1 className="text-4xl font-bold mb-10">Favorite Albums</h1>
 
         {albums.map((album: any) => (
-          <AlbumCard
-            key={album.id}
-            id={album.id}
-            artist={album.artist}
-            album={album.album}
-            year={album.year}
-          />
+          <AlbumCard key={album.id} {...album} />
         ))}
       </div>
     </div>

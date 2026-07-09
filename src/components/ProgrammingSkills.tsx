@@ -8,7 +8,7 @@ function ProgrammingSkills({ skills }: any) {
       <h2 className="text-3xl font-bold mb-6">Programming Skills:</h2>
 
       {skills.map((skill: any) => (
-        <SkillCard key={skill.name} name={skill.name} rating={skill.rating} />
+        <SkillCard key={skill.name} {...skill} />
       ))}
     </div>
   );

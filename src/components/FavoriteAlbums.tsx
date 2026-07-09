@@ -10,12 +10,7 @@ function FavoriteAlbums({ albums }: any) {
       <h2 className="text-3xl font-bold mb-6">Favorite Albums:</h2>
 
       {albums.slice(0, 3).map((album: any) => (
-        <AlbumCard
-          key={album.id}
-          id={album.id}
-          artist={album.artist}
-          album={album.album}
-        />
+        <AlbumCard key={album.id} {...album} />
       ))}
 
       <Link to="/albums" className="hover:text-sky-400 transition">
