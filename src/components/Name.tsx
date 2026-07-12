@@ -1,6 +1,10 @@
 // src/components/Name.tsx
 
-function Name({ name }: any) {
+type NameProps = {
+  name: string;
+};
+
+function Name({ name }: NameProps) {
   return <h1 className="text-4xl md:text-6xl font-bold mb-4">{name}</h1>;
 }
 

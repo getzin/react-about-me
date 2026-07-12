@@ -4,10 +4,16 @@ import { Link } from "react-router-dom";
 
 import { useParams } from "react-router-dom";
 
-function AlbumDetail({ albums }: any) {
+import type { Album } from "../types/album";
+
+type AlbumDetailProps = {
+  albums: Album[];
+};
+
+function AlbumDetail({ albums }: AlbumDetailProps) {
   const { albumId } = useParams();
 
-  const album = albums.find((album: any) => album.id === albumId);
+  const album = albums.find((album) => album.id === albumId);
 
   if (!album) {
     return <h1>Album not found</h1>;

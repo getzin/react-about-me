@@ -6,7 +6,13 @@ import AlbumCard from "../components/AlbumCard";
 
 import { useState } from "react";
 
-function Albums({ albums }: any) {
+import type { Album } from "../types/album";
+
+type AlbumsProps = {
+  albums: Album[];
+};
+
+function Albums({ albums }: AlbumsProps) {
   const [layout, setLayout] = useState("list");
 
   // console.log(layout);
@@ -47,7 +53,7 @@ function Albums({ albums }: any) {
         <div
           className={layout === "grid" ? "grid grid-cols-2 gap-6" : "space-y-6"}
         >
-          {albums.map((album: any) => (
+          {albums.map((album) => (
             <AlbumCard key={album.id} {...album} />
           ))}
         </div>

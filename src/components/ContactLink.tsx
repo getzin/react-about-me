@@ -1,6 +1,8 @@
 // src/components/ContactLink.tsx
 
-function ContactLink({ name, value }: any) {
+import type { ContactItem } from "../types/contact";
+
+function ContactLink({ name, value }: ContactItem) {
   return (
     <div className="mb-8">
       <h2 className="text-2xl font-bold text-white">{name}</h2>

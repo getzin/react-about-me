@@ -1,6 +1,8 @@
 // src/components/LanguageCard.tsx
 
-function LanguageCard({ name, level }: any) {
+import type { Language } from "../types/language";
+
+function LanguageCard({ name, level }: Language) {
   return (
     <div className="mb-8">
       <h2 className="text-2xl font-bold text-white">{name}</h2>

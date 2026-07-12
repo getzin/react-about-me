@@ -2,7 +2,9 @@
 
 import { Link } from "react-router-dom";
 
-function AlbumCard({ id, artist, album, year }: any) {
+import type { Album } from "../types/album";
+
+function AlbumCard({ id, artist, album, year }: Album) {
   return (
     <Link to={`/albums/${id}`}>
       <div className="mb-8 hover:translate-x-1 transition">

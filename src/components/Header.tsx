@@ -3,7 +3,11 @@
 import Name from "./Name";
 import ProfileImage from "./ProfileImage";
 
-function Header({ name }: any) {
+type HeaderProps = {
+  name: string;
+};
+
+function Header({ name }: HeaderProps) {
   return (
     <div className="text-center mb-10 md:mb-14">
       <Name name={name} />

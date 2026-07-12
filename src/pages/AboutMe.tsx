@@ -6,7 +6,13 @@ import Languages from "../components/Languages";
 import FavoriteAlbums from "../components/FavoriteAlbums";
 import Contact from "../components/Contact";
 
-function AboutMe({ data }: any) {
+import type { Profile } from "../types/profile";
+
+type AboutMeProps = {
+  data: Profile;
+};
+
+function AboutMe({ data }: AboutMeProps) {
   const { name, programmingSkills, languages, favoriteAlbums, contact } = data;
   return (
     <div className="min-h-screen bg-zinc-900 text-white">
