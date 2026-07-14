@@ -1,4 +1,5 @@
 import HobbyCard from "./HobbyCard";
+import PlaygroundCard from "./PlaygroundCard";
 
 export default function SpreadExample() {
   const hobby = {
@@ -9,26 +10,31 @@ export default function SpreadExample() {
   };
 
   return (
-    <div className="space-y-8 p-6">
-      <div>
-        <h1 className="mb-4 text-2xl font-bold">
-          Variante A (einzeln übergeben)
-        </h1>
+    <PlaygroundCard
+      title="Spread Operator"
+      concepts="Props • Destructuring • Spread (...)"
+    >
+      <div className="space-y-6">
+        <div className="space-y-2">
+          <h3 className="font-semibold text-white">
+            Variante A (einzeln übergeben)
+          </h3>
 
-        <HobbyCard
-          name={hobby.name}
-          icon={hobby.icon}
-          difficulty={hobby.difficulty}
-        />
+          <HobbyCard
+            name={hobby.name}
+            icon={hobby.icon}
+            difficulty={hobby.difficulty}
+          />
+        </div>
+
+        <div className="space-y-2">
+          <h3 className="font-semibold text-white">
+            Variante B (Spread Operator)
+          </h3>
+
+          <HobbyCard {...hobby} />
+        </div>
       </div>
-
-      <div>
-        <h1 className="mb-4 text-2xl font-bold">
-          Variante B (Spread Operator)
-        </h1>
-
-        <HobbyCard {...hobby} />
-      </div>
-    </div>
+    </PlaygroundCard>
   );
 }

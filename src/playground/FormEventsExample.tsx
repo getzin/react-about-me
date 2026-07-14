@@ -1,3 +1,5 @@
+import PlaygroundCard from "./PlaygroundCard";
+
 export default function FormEventsExample() {
   function handleClick() {
     console.log("Button wurde geklickt!");
@@ -10,18 +12,27 @@ export default function FormEventsExample() {
   }
 
   return (
-    <div className="rounded-xl bg-zinc-800 p-6 space-y-6">
-      <h2 className="text-2xl font-bold">Form Events</h2>
-
-      <button onClick={handleClick} className="rounded bg-red-600 px-6 py-3">
-        Klick mich
-      </button>
-
-      <form onSubmit={handleSubmit}>
-        <button type="submit" className="rounded bg-green-600 px-6 py-3">
-          Formular absenden
+    <PlaygroundCard
+      title="Form Events"
+      concepts="onClick • onSubmit • preventDefault"
+    >
+      <div className="space-y-4">
+        <button
+          onClick={handleClick}
+          className="rounded-lg bg-cyan-600 px-4 py-2 text-white transition hover:bg-cyan-500"
+        >
+          Klick mich
         </button>
-      </form>
-    </div>
+
+        <form onSubmit={handleSubmit}>
+          <button
+            type="submit"
+            className="rounded-lg bg-emerald-600 px-4 py-2 text-white transition hover:bg-emerald-500"
+          >
+            Formular absenden
+          </button>
+        </form>
+      </div>
+    </PlaygroundCard>
   );
 }

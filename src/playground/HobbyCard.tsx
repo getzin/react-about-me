@@ -1,15 +1,21 @@
 function HobbyCard(props: any) {
-  console.log(props);
-
   const { name, icon, difficulty, country } = props;
 
   return (
-    <div>
-      <h2>
+    <div className="rounded-lg bg-zinc-700 p-4">
+      <h3 className="text-lg font-bold text-white">
         {icon} {name}
-      </h2>
-      <p>{difficulty}</p>
-      <p>{country}</p>
+      </h3>
+
+      <p className="text-zinc-300">
+        Schwierigkeit:
+        <span className="ml-2 text-white">{difficulty}</span>
+      </p>
+
+      <p className="text-zinc-300">
+        Land:
+        <span className="ml-2 text-white">{country}</span>
+      </p>
     </div>
   );
 }

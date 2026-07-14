@@ -1,4 +1,4 @@
-// EventsExample.tsx
+import PlaygroundCard from "./PlaygroundCard";
 
 export default function EventsExample() {
   function handleClick() {
@@ -7,15 +7,13 @@ export default function EventsExample() {
   }
 
   return (
-    <div className="rounded-xl bg-zinc-800 p-6">
-      <h2 className="mb-4 text-2xl font-bold">Events</h2>
-
+    <PlaygroundCard title="Events" concepts="onClick • Event Handler">
       <button
         onClick={handleClick}
-        className="rounded bg-red-600 px-10 py-6 text-3xl"
+        className="rounded-lg bg-cyan-600 px-6 py-3 text-white transition hover:bg-cyan-500"
       >
         TEST BUTTON
       </button>
-    </div>
+    </PlaygroundCard>
   );
 }

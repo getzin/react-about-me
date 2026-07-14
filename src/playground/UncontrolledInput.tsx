@@ -1,20 +1,25 @@
+import PlaygroundCard from "./PlaygroundCard";
+
 export default function UncontrolledInput() {
   function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
     console.log("Browser kennt:", event.target.value);
   }
 
   return (
-    <div className="rounded-xl bg-zinc-800 p-6">
-      <h2 className="mb-4 text-2xl font-bold">Uncontrolled Input</h2>
-
+    <PlaygroundCard
+      title="Uncontrolled Input"
+      concepts="Browser • onChange • kein React-State"
+    >
       <input
         type="text"
         onChange={handleChange}
         placeholder="Tippe etwas..."
-        className="w-full rounded bg-zinc-700 p-2"
+        className="w-full rounded-lg bg-zinc-700 p-3 text-white placeholder:text-zinc-500"
       />
 
-      <p className="mt-4 text-zinc-400">React speichert den Text nicht.</p>
-    </div>
+      <p className="mt-4 text-zinc-300">
+        React speichert den Text nicht im State.
+      </p>
+    </PlaygroundCard>
   );
 }
