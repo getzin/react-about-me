@@ -7,6 +7,7 @@ function Navbar() {
     <nav className="flex justify-center gap-8 p-6 bg-zinc-800 text-white">
       <Link to="/">Home</Link>
       <Link to="/albums">Albums</Link>
+      <Link to="/playground">Playground</Link>
     </nav>
   );
 }
