@@ -29,7 +29,7 @@ function AlbumDetail({ albums }: AlbumDetailProps) {
           ← Back to Albums
         </Link>
 
-        <h1 className="text-5xl font-bold">{album.album}</h1>
+        <h1 className="text-5xl font-bold">{album.title}</h1>
 
         <h2 className="text-2xl text-zinc-300 mt-4">{album.artist}</h2>
 

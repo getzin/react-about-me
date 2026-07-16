@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 import type { Album } from "../types/album";
 
-function AlbumCard({ id, artist, album, year }: Album) {
+function AlbumCard({ id, artist, title, year }: Album) {
   return (
     <Link to={`/albums/${id}`}>
       <div className="mb-8 hover:translate-x-1 transition">
@@ -12,7 +12,7 @@ function AlbumCard({ id, artist, album, year }: Album) {
           {artist}
         </h2>
 
-        <p className="text-lg text-zinc-400">{album}</p>
+        <p className="text-lg text-zinc-400">{title}</p>
 
         {year && <p className="text-sm text-zinc-500">{year}</p>}
       </div>

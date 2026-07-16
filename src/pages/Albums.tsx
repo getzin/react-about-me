@@ -14,6 +14,18 @@ type AlbumsProps = {
 
 function Albums({ albums }: AlbumsProps) {
   const [layout, setLayout] = useState("list");
+  const [search, setSearch] = useState("");
+
+  const filteredAlbums = albums.filter((album) => {
+    const searchTerm = search.toLowerCase();
+
+    return (
+      album.title.toLowerCase().includes(searchTerm) ||
+      album.artist.toLowerCase().includes(searchTerm)
+    );
+  });
+
+  const hasAlbums = filteredAlbums.length > 0;
 
   // console.log(layout);
 
@@ -48,15 +60,28 @@ function Albums({ albums }: AlbumsProps) {
           >
             ⬜ Grid
           </button>
+          <input
+            type="text"
+            placeholder="Search albums..."
+            value={search}
+            onChange={(event) => setSearch(event.target.value)}
+            className="mt-4 w-full rounded border border-zinc-600 bg-zinc-800 px-4 py-2 text-white outline-none focus:border-blue-500"
+          />
         </div>
 
-        <div
-          className={layout === "grid" ? "grid grid-cols-2 gap-6" : "space-y-6"}
-        >
-          {albums.map((album) => (
-            <AlbumCard key={album.id} {...album} />
-          ))}
-        </div>
+        {hasAlbums ? (
+          <div
+            className={
+              layout === "grid" ? "grid grid-cols-2 gap-6" : "space-y-6"
+            }
+          >
+            {filteredAlbums.map((album) => (
+              <AlbumCard key={album.id} {...album} />
+            ))}
+          </div>
+        ) : (
+          <p className="text-zinc-400">🔍 No albums found.</p>
+        )}
       </div>
     </div>
   );
