@@ -1,4 +1,4 @@
-// src/components/Contact.tsx
+// src/components/ContactSection.tsx
 
 import ContactLink from "./ContactLink";
 

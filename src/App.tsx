@@ -4,6 +4,8 @@ import data from "./data/profile.json";
 
 import AboutMe from "./pages/AboutMe";
 
+import Contact from "./pages/Contact";
+
 import Albums from "./pages/Albums";
 
 import AlbumDetail from "./pages/AlbumDetail";
@@ -31,6 +33,7 @@ function App() {
           element={<AlbumDetail albums={data.favoriteAlbums} />}
         />
         <Route path="/playground" element={<Playground />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>

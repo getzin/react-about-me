@@ -4,7 +4,7 @@ import Header from "../components/Header";
 import ProgrammingSkills from "../components/ProgrammingSkills";
 import Languages from "../components/Languages";
 import FavoriteAlbums from "../components/FavoriteAlbums";
-import Contact from "../components/Contact";
+import ContactSection from "../components/ContactSection";
 
 import type { Profile } from "../types/profile";
 
@@ -21,7 +21,7 @@ function AboutMe({ data }: AboutMeProps) {
         <ProgrammingSkills skills={programmingSkills} />
         <Languages languages={languages} />
         <FavoriteAlbums albums={favoriteAlbums} />
-        <Contact contact={contact} />
+        <ContactSection contact={contact} />
       </div>
     </div>
   );
