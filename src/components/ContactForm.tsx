@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 type ContactFormProps = {
   onSuccess: () => void;
@@ -9,13 +9,18 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
+
+    const file = fileInputRef.current?.files?.[0];
 
     console.log({
       name,
       email,
       message,
+      file,
     });
 
     onSuccess();
@@ -60,6 +65,15 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
           placeholder="Your message"
           value={message}
           onChange={(event) => setMessage(event.target.value)}
+        />
+      </div>
+
+      <div className="flex flex-col gap-2">
+        <label className="font-semibold">Attachment</label>
+        <input
+          ref={fileInputRef}
+          type="file"
+          className="text-sm text-zinc-300"
         />
       </div>
 
