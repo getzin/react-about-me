@@ -11,9 +11,21 @@ import FormExample from "./FormExample";
 import FocusExample from "./FocusExample";
 import FilterExample from "./FilterExample";
 
+import { useRef } from "react";
+
+import ScrollToTopButton from "../components/ScrollToTopButton";
+
 export default function Playground() {
+  const topRef = useRef<HTMLElement>(null);
+
+  function scrollToTop() {
+    topRef.current?.scrollIntoView({
+      behavior: "smooth",
+    });
+  }
+
   return (
-    <main className="min-h-screen bg-zinc-900">
+    <main ref={topRef} className="min-h-screen bg-zinc-900">
       <div className="mx-auto max-w-6xl space-y-8 p-8">
         <header>
           <h1 className="mb-2 text-4xl font-bold text-white">
@@ -36,6 +48,7 @@ export default function Playground() {
         <FocusExample />
         <FilterExample />
       </div>
+      <ScrollToTopButton onClick={scrollToTop} />
     </main>
   );
 }
