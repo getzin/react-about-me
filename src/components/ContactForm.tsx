@@ -1,37 +1,39 @@
-import { useRef, useState } from "react";
+import { useRef } from "react";
+import { useForm } from "react-hook-form";
+
+type ContactFormData = {
+  name: string;
+  email: string;
+  message: string;
+};
 
 type ContactFormProps = {
   onSuccess: () => void;
 };
 
 export default function ContactForm({ onSuccess }: ContactFormProps) {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault();
+  const { register, handleSubmit, reset } = useForm<ContactFormData>();
 
+  function onSubmit(data: ContactFormData) {
     const file = fileInputRef.current?.files?.[0];
 
     console.log({
-      name,
-      email,
-      message,
+      ...data,
       file,
     });
 
     onSuccess();
 
-    setName("");
-    setEmail("");
-    setMessage("");
+    reset();
   }
 
   return (
-    <form className="flex flex-col gap-6 max-w-lg" onSubmit={handleSubmit}>
+    <form
+      className="flex flex-col gap-6 max-w-lg"
+      onSubmit={handleSubmit(onSubmit)}
+    >
       <div className="flex flex-col gap-2">
         <label className="font-semibold">Name</label>
 
@@ -39,8 +41,7 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
           className="rounded-lg border border-zinc-600 bg-zinc-800 px-4 py-2 text-white outline-none focus:border-blue-500"
           type="text"
           placeholder="Your name"
-          value={name}
-          onChange={(event) => setName(event.target.value)}
+          {...register("name")}
         />
       </div>
 
@@ -51,8 +52,7 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
           className="rounded-lg border border-zinc-600 bg-zinc-800 px-4 py-2 text-white outline-none focus:border-blue-500"
           type="email"
           placeholder="Your email"
-          value={email}
-          onChange={(event) => setEmail(event.target.value)}
+          {...register("email")}
         />
       </div>
 
@@ -63,8 +63,7 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
           className="rounded-lg border border-zinc-600 bg-zinc-800 px-4 py-2 text-white outline-none focus:border-blue-500"
           rows={6}
           placeholder="Your message"
-          value={message}
-          onChange={(event) => setMessage(event.target.value)}
+          {...register("message")}
         />
       </div>
 
