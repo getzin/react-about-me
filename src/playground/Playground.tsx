@@ -1,5 +1,9 @@
 // Playground.tsx
 
+import { useRef } from "react";
+
+import ScrollToTopButton from "../components/ScrollToTopButton";
+
 import PetsList from "./PetsList";
 import SpreadExample from "./SpreadExample";
 import EventsExample from "./EventsExample";
@@ -10,11 +14,8 @@ import Counter from "./Counter";
 import FormExample from "./FormExample";
 import FocusExample from "./FocusExample";
 import FilterExample from "./FilterExample";
-import ContextExample from "./context/ContextExample";
 
-import { useRef } from "react";
-
-import ScrollToTopButton from "../components/ScrollToTopButton";
+import ThemeContextExample from "./context/ThemeContextExample";
 import UserContextExample from "./context/UserContextExample";
 
 export default function Playground() {
@@ -217,7 +218,7 @@ export default function Playground() {
         </section>
 
         <section>
-          <ContextExample />
+          <ThemeContextExample />
         </section>
 
         <section>
