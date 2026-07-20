@@ -15,6 +15,7 @@ import ContextExample from "./context/ContextExample";
 import { useRef } from "react";
 
 import ScrollToTopButton from "../components/ScrollToTopButton";
+import UserContextExample from "./context/UserContextExample";
 
 export default function Playground() {
   const topRef = useRef<HTMLElement>(null);
@@ -217,6 +218,10 @@ export default function Playground() {
 
         <section>
           <ContextExample />
+        </section>
+
+        <section>
+          <UserContextExample />
         </section>
       </div>
       <ScrollToTopButton onClick={scrollToTop} />
