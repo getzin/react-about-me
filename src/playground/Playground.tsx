@@ -10,6 +10,7 @@ import Counter from "./Counter";
 import FormExample from "./FormExample";
 import FocusExample from "./FocusExample";
 import FilterExample from "./FilterExample";
+import ContextExample from "./context/ContextExample";
 
 import { useRef } from "react";
 
@@ -212,6 +213,10 @@ export default function Playground() {
 
         <section ref={filterRef}>
           <FilterExample />
+        </section>
+
+        <section>
+          <ContextExample />
         </section>
       </div>
       <ScrollToTopButton onClick={scrollToTop} />
