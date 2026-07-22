@@ -1,6 +1,7 @@
 // src/components/Navbar.tsx
 
 import { Link } from "react-router-dom";
+import ThemeToggle from "./ThemeToggle";
 
 function Navbar() {
   return (
@@ -9,6 +10,7 @@ function Navbar() {
       <Link to="/albums">Albums</Link>
       <Link to="/playground">Playground</Link>
       <Link to="/contact">Contact</Link>
+      <ThemeToggle />
     </nav>
   );
 }
