@@ -13,6 +13,8 @@ import ThemeContext from "../context/ThemeContext";
 
 import ScrollToTopButton from "../components/ScrollToTopButton";
 
+import GitHubProjects from "../components/GitHubProjects";
+
 type AboutMeProps = {
   data: Profile;
 };
@@ -41,6 +43,9 @@ function AboutMe({ data }: AboutMeProps) {
         <Languages languages={languages} />
         <FavoriteAlbums albums={favoriteAlbums} />
         <ContactSection contact={contact} />
+        <div className="md:col-span-2">
+          <GitHubProjects />
+        </div>
       </div>
 
       <ScrollToTopButton onClick={scrollToTop} />
